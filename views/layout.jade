@@ -2,8 +2,6 @@ doctype html
 html
 	head
 		title= title
-		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
-		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
 		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
 		link(rel='stylesheet', href='/stylesheets/style.css')
 
@@ -19,20 +17,20 @@ html
 						a.navbar-brand(href='#') Express Contact
 					#navbar.collapse.navbar-collapse
 						ul.nav.navbar-nav
-							li(class=(title === 'Home' ? 'active' : ''))
-								a(href='/') Home
 							li(class=(title === 'Members' ? 'active' : ''))
-								a(href='/members') Members
+								a(href='/') Members
 							li(class=(title === 'Register' ? 'active' : ''))
 								a(href='/users/register') Register
 							li(class=(title === 'Log In' ? 'active' : ''))
 								a(href='/users/login') Log In
 						ul.nav.navbar-nav.navbar-right
-							li(class=(title === 'Log Out' ? 'active' : ''))
 								a(href='/users/logout') Log Out
 					// /.nav-collapse
-			block content
+			.container
+				block content
 			footer
 				.container
 					p &copy; 2015, All Rights Reserved
 			// /.container
+			script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+			script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
