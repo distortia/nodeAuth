@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
+var User = require('../models/user');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+ 	res.send('respond with a resource');
 });
 
 router.get('/register', function(req, res, next){
@@ -67,19 +68,19 @@ router.post('/register', function(req, res, next){
 			password: password,
 			profileImage: profileImageName
 		});
-	}
 
-	//Create user
-	user.createUser(newUser, function(error, user){
-		if(error){
-			throw error;
+
+		//Create user
+		User.createUser(newUser, function(error, user){
+			if(error){
+				throw error;
+			}
 			console.log(user);
-		}
-
-		req.flash('success', 'You have successfully registered. Please log in.');
-		res.location('/');
-		res.redirect('/');
-	});
+			req.flash('success', 'You have successfully registered. Please log in.');
+			res.location('/');
+			res.redirect('/');
+		});
+	}
 });
 
 
