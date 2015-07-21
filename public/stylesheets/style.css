@@ -6,3 +6,27 @@ body {
 a {
   color: #00B7FF;
 }
+
+ul.success li, ul.error li, ul.info li {
+	margin: 20px 0 20px 0;
+	padding: 15px;
+	border: 1px solid transparent;
+	list-style: none;
+	border-radius: 5px;
+}
+
+ul.success li{
+	color: #3c763d;
+	background-color: #dff0d8;
+	border-color: #d6e9C6;
+}
+ul.info li{
+	color: #31708f;
+	background-color: #D9EDF7;
+	border-color: #bce8f1;
+}
+ul.error li {
+	color: #ac2925;
+	background-color: #ce8483;
+	border-color: #880000;
+}
